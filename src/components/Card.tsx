@@ -1,17 +1,21 @@
 interface CardProps {
    title: string;
-   head: string;
+   header: string;
    updated: string;
    created: string;
 }
 
-function Card({ head, title, updated, created }: CardProps) {
+function Card({ header, title, updated, created }: CardProps) {
    return (
       <div className="card">
-         <h5>{head}</h5>
-         <h1>{title}</h1>
-         <p>{updated}</p>
-         <p>{created}</p>
+         <div className="card-headings">
+            <h5>{header}</h5>
+            <h1>{title}</h1>
+         </div>
+         <div className="card-info">
+            <p>{updated}</p>
+            <p>{created}</p>
+         </div>
       </div>
    );
 }
